@@ -61,7 +61,7 @@
   backdrop-filter: blur(150px);
   box-shadow: #000b4728 0 0 30px;
   border-radius: 40px;
-  transform: translateX(120%);
+  transform: translateX(210%);
   color: var(--invert-color);
   display: flex;
   flex-direction: column;
@@ -74,7 +74,7 @@
   max-height: 500px;
 }
 .descript.active {
-  transform: translateX(0);
+  transform: translateX(105%);
 }
 .descript h2 {
   font-size: 20px;
