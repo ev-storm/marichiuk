@@ -244,7 +244,7 @@ input[type="password"] {
 .check-form span {
   position: relative;
   padding-left: 25px;
-  font-size: 12px;
+  font-size: 11px;
   color: var(--invert-color);
   cursor: pointer;
   margin-left: 10px;
