@@ -1,0 +1,72 @@
+@import url("media.css");
+@import url("font.css");
+@import url("background.css");
+@import url("dark-mode.css");
+@import url("main.css");
+
+:root {
+  --h1: 25px;
+  --h2: 20px;
+  --h3: 16px;
+  --black: #333333;
+  --blue: #337bff;
+  --gray: #515151;
+  --tran: all 0.5s ease;
+}
+.element::-webkit-scrollbar {
+  width: 0;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--black);
+  cursor: pointer;
+}
+h2 {
+  font-size: var(--h2);
+}
+h3 {
+  font-size: var(--h3);
+}
+body {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: var(--h1);
+  color: var(--black);
+  line-height: 1.5;
+  overflow: hidden;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+main {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  outline: none;
+}
+li {
+  list-style-type: none;
+}
+.error {
+  border: 2px solid #f85040;
+}

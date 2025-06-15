@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Тестовое задание</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <!------------------- robots -------------------------->
+    <meta name="robots" content="noindex, nofollow" />
+    <!------------------- CSS -------------------------->
+    <link rel="stylesheet" href="./css/master.css" />
+    <!------------------- JS -------------------------->
+    <script defer src="./js/background.js"></script>
+    <script defer src="./js/darkMode.js"></script>
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/input.js"></script>
+    <!------------------- FAV -------------------------->
+    <link class="fav" href="./assets/svg/fav-light.ico" rel="icon" />
+    <!---------------------robots----------------------->
+    <meta name="robots" content="noindex, nofollow" />
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https:" />
+    <meta
+      property="og:title"
+      content="ГК «Геоскан» — создаем беспилотные технологии для профессионалов"
+    />
+    <meta
+      property="og:description"
+      content="Геоскан — российская группа технологических компаний, которая занимается разработкой и производством беспилотных авиационных систем (БАС)"
+    />
+    <meta property="og:image" content="./assets/img/main.jpg" />
+    <!-- telegram_image1x1 -->
+    <meta name="twitter:card" content="./assets/img/main.jpg" />
+  </head>
+
+  <body>
+    <header>
+      <img class="logo" src="./assets/svg/logo.svg" alt="" />
+      <label class="switch">
+        <input id="theme-switch" type="checkbox" />
+        <span class="slider round"></span>
+      </label>
+    </header>
+    <main>
+      <div class="form">
+        <div class="form-logo">
+          <img src="./assets/svg/logo-mini.svg" alt="" />
+        </div>
+        <form id="registrationForm">
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Логин"
+            required
+          />
+          <div class="pass-con">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Пароль"
+              required
+            />
+            <img
+              class="pass-btn see"
+              id="togglePassword"
+              src="./assets/svg/on.svg"
+              alt=""
+            />
+            <img
+              class="pass-btn"
+              id="generatePassword"
+              src="./assets/svg/random.svg"
+              alt=""
+            />
+          </div>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="Фамилия"
+            required
+          />
+          <div class="name-con">
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              placeholder="Имя"
+              required
+            />
+            <div class="name-list"></div>
+          </div>
+          <input
+            type="text"
+            id="middleName"
+            name="middleName"
+            placeholder="Отчество"
+            required
+          />
+          <div class="city-con">
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="Адрес"
+              required
+            />
+            <div class="city-list"></div>
+          </div>
+
+          <button class="form-btn btn" type="submit" disabled>
+            Зарегистрироваться
+          </button>
+          <label class="check-form" for="check-form-id">
+            <input id="check-form-id" type="checkbox" />
+            <span
+              >Согласен с
+              <a
+                href="https://www.geoscan.ru/ru/about/privacy-policy"
+                target="_blank"
+                >политикой конфиденциальности</a
+              ></span
+            >
+          </label>
+        </form>
+      </div>
+      <div class="gradient-bg">
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur
+                in="SourceGraphic"
+                stdDeviation="10"
+                result="blur"
+              />
+              <feColorMatrix
+                in="blur"
+                mode="matrix"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                result="goo"
+              />
+              <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+          </defs>
+        </svg>
+        <div class="gradients-container">
+          <div class="g1"></div>
+          <div class="g2"></div>
+          <div class="g3"></div>
+          <div class="g4"></div>
+          <div class="g5"></div>
+          <div class="interactive"></div>
+        </div>
+      </div>
+      <div class="tip"></div>
+
+      <div class="descript">
+        <ul>
+          <li class="descript-item">
+            <h2>Динамический градиентный фон</h2>
+            <h3>
+              Главная задача фронтендера — занять посетителя сайта даже при не
+              очень комфортном действии, как регистрация. Исходя из этой мысли,
+              было решено анимировать фон с эффектом лаволампы и пузыря,
+              следящего за курсором, для залипательности. Важно сделать фон
+              ненавязчивым. Для этого есть много готовых решений с применением
+              canvas, но для презентационного проекта хватит и нативного JS +
+              CSS.
+            </h3>
+          </li>
+          <li class="descript-item">
+            <h2>Light/Dark Mode</h2>
+            <h3>
+              Поскольку градиентные пузыри выглядят эффектнее на темном фоне,
+              было решено внедрить эту функцию. Само собой, пришлось учитывать
+              состояние цвета самой формы и других элементов, логотипа и даже
+              фавикона. Функцию darkMode я вынес в отдельный скрипт, где легко
+              контролирую состояние компонентов. Для технического задания это
+              более чем удобно, но в большом проекте, возможно, я бы слегка
+              скорректировал логику. Также было важно не сбрасывать отрисовку
+              Light/Dark Mode при перезагрузке страницы. Для этого я храню
+              состояние в localStorage.
+            </h3>
+          </li>
+          <li class="descript-item">
+            <h2>Ревью выполненной работы</h2>
+            <h3>
+              Чтобы не писать в комментариях ход выполненной работы, было решено
+              вынести ревью в клиентский интерфейс.
+            </h3>
+          </li>
+          <li class="descript-item">
+            <h2>Подсказка городов</h2>
+            <h3>
+              В 2025 году пользователь привык к всяческим подсказкам, маскам на
+              номере телефона, автозаполнению и т.д. Так как здесь не
+              указывается номер телефона, я решил, что наиболее релевантным
+              примером будут города. Нецелесообразно хранить в файлах сайта
+              более 1000 городов России, поэтому я воспользовался сторонним API
+              для предложения адресов, исходя из введенных символов. Так как
+              подсказка с легкостью определяет не только города, но и точные
+              улицы и номера домов, я изменил плейсхолдер на “адрес”. Для более
+              интуитивного управления выбором городов в предложенном списке
+              можно осуществить через клавиатуру.
+            </h3>
+          </li>
+          <li class="descript-item">
+            <h2>Уведомление</h2>
+            <h3>
+              На первый взгляд это не самый первостепенный, но довольно важный
+              элемент интерфейса — уведомление пользователя о проделанном
+              действии. Постарался сделать его не слишком навязчивым, но
+              заметным.
+            </h3>
+          </li>
+          <li class="descript-item">
+            <h2>Отправка данных в консоль</h2>
+            <h3>
+              Для сборки и вывода данных пользователя в консоль,а так же
+              предполагаемой отправки данных на сервер подготовил объект в
+              формате json. <br />
+            </h3>
+          </li>
+        </ul>
+        <div class="btn-social-con">
+          <a href="./assets/img/test.pdf" target="_blank"
+            ><button class="btn btn-social">ответы на тест</button></a
+          >
+          <div class="social">
+            <a href="https://t.me/marichuc_evgeny" target="_blank"
+              ><img src="./assets/img/tg.png" alt=""
+            /></a>
+            <a href="https://github.com/ev-storm/marichiuk.git" target="_blank"
+              ><img src="./assets/img/gh.png" alt=""
+            /></a>
+            <a href="https://www.behance.net/-insight-" target="_blank"
+              ><img src="./assets/img/bh.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <img class="descript-btn" src="./assets/svg/close.svg" alt="descript" />
+    </main>
+  </body>
+</html>

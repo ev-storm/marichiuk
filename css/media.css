@@ -1,0 +1,40 @@
+@media (max-width: 600px) {
+  :root {
+    --h1: 20px !important;
+    --h2: 16px !important;
+    --h3: 12px !important;
+  }
+  header {
+    padding: 0 20px !important;
+  }
+  .form {
+    width: 90vw !important;
+    height: 75vh !important;
+    padding: 10px 30px !important;
+  }
+  .tip {
+    z-index: 99 !important;
+    min-width: 90vw !important;
+  }
+  .descript.active {
+    left: 5% !important;
+  }
+  .descript {
+    left: 100% !important;
+    width: 90vw !important;
+    height: 75vh !important;
+    padding: 10px 30px !important;
+  }
+  .descript-btn {
+    right: 20px !important;
+  }
+  .btn-social-con {
+    flex-direction: column;
+  }
+  .btn-social {
+    width: 100% !important;
+  }
+  .check-form span {
+    font-size: 10px !important;
+  }
+}
